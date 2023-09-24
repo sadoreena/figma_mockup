@@ -1,38 +1,289 @@
 .App {
   text-align: center;
+  border: 5px solid black;
+  height: 100vh; /* 100% of the viewport height */
+  width: 100vw; /* 100% of the viewport width */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/Users/sadorianr/Library/Fonts/IBMPlexMono-Regular.ttf') format('woff2'),
+       url('/Users/sadorianr/Library/Fonts/IBMPlexMono-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: url('./assets/yellow-fuzzy-pointer.png'), auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#content {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  height: 100%;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: large;
+}
+
+/* navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10%;
+  width: 100%;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 20px;
+}
+
+.name-pointer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
+  padding: 10px;
+  margin: 30px;
+  background-color: #ffcc00; 
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  border: 10px solid black;
+  box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.3); 
+}
+
+
+/* todo note styling */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 10px;
+  padding-top: 0px;
+  background-color: salmon; 
+  position: absolute;
+  top: 100px;
+  right: 300px;
+  border: 10px solid black;
+  box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.todo-list {
+  padding-left: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+ul li::before {
+  content: "\2022"; 
+  color: black; 
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* music styling */
+.music-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 10px;
+  padding-top: 0px;
+  margin: 30px;
+  background-color: #C4C4C4; 
+  position: relative;
+  bottom: 0;
+  border: 10px solid black;
+  box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.play-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.music-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.song-info {
+  margin-left: 20px;
+}
+
+.song-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.song-artist {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.play-button:hover {
+  background-color: #555;
+}
+
+/* bio styling */
+.bio-container {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: fit-content;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 10px;
+  padding-top: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 10%;
+  margin: 30px;
+  background-color: white; 
+  border: 10px solid black;
+  box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.3); 
+}
+
+.banner div {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bio-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-text-content {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.personal-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.user-pronouns {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.user-description {
+  font-size: 16px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.user-bio {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.bio-footer {
+  margin-top: 20px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.linkedin {
+  font-weight: bold;
+  color: #0077b5; 
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.country {
+  margin-top: 5px;
+}
+
+.desktop-icons-container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 0;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10px;
+}
+
+.footer {
+  background-color: #90ba64;
+  width: "100%";
+  position: absolute;
+  bottom: 0;
+  border-top: 5px solid black;
 }
