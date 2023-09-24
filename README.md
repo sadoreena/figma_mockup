@@ -9,6 +9,8 @@ Time spent: **7** hours spent in total
 * [x] User can move page elements
 * [x] Webpage navbar displays accurate date
 
+<img width="1536" alt="Screenshot 2023-09-24 at 12 05 39 AM" src="https://github.com/sadoreena/figma_mockup/assets/78514743/6d225aff-5d04-41b8-998d-1f698b63ae23">
+
 ## License
 
     Copyright [2021] [Sadorian Robertson]
