@@ -1,6 +1,7 @@
 # figma_mockup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This simple mockup of a design I created for my Visual Frontiers course was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Created with JavaScript, HTML, and CSS.
 
 Time spent: **7** hours spent in total
 
